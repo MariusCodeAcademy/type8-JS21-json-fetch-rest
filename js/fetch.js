@@ -11,3 +11,8 @@ fetch('people.json')
     console.log('dataInJs ===', dataInJs);
   })
   .catch((err) => console.warn(err));
+
+fetch('main.txt')
+  .then((resp) => resp.text())
+  .then((data) => console.log('data ===', data))
+  .catch((error) => console.log(error));
