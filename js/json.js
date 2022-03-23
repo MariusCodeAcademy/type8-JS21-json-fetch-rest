@@ -64,3 +64,37 @@ const peopleObjs = [
     sex: 'female',
   },
 ];
+
+const user1 = {
+  name: 'James',
+  age: 45,
+  hasCar: true,
+  score: null,
+};
+// const user2 = {
+//   name: 'James',
+//   age: 45,
+//   hasCar: true,
+//   score: null,
+// };
+
+// JSON
+// JSON.stringify() paversti kintamaji i json formata
+
+const u1JsonFormatu = JSON.stringify(user1);
+
+console.log('user1 ===', user1);
+console.log('u1JsonFormatu ===', u1JsonFormatu);
+
+// is Json verciam i JS objektus masyvus ir tt
+// JSON.parse()
+const u1BackToJs = JSON.parse(u1JsonFormatu);
+
+console.log('ar user1 yra lygus u1BackToJs', user1 === u1BackToJs);
+
+// paverciam peopleObjs i json ir gauta json issaugom kaip people.json
+const pplJson = JSON.stringify(peopleObjs);
+console.log('pplJson ===', pplJson);
+// atsiversti atgal is json i js ir isitikinti kad veikia
+const pplBackToJs = JSON.parse(pplJson);
+console.log('pplBackToJs ===', pplBackToJs);
